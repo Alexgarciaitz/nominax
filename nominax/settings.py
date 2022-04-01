@@ -14,10 +14,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z0hp(epqimec04i)n8j7q=+g0zu@5z9g*-x@kr-5a%3756(4bn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#para produccion activarlo o desactivarlo True o False
+# para produccion activarlo o desactivarlo True o False
 DEBUG = False
-#la unica instancia que ejecuta el proyecto
-ALLOWED_HOSTS = ['nominay.herokuapp.com']
+# la unica instancia que ejecuta el proyecto
+ALLOWED_HOSTS = ['nominay.herokuapp.com/']
 
 
 # Application definition
@@ -64,26 +64,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'nominax.wsgi.application'
 
 
- 
-
-#DATABASES = {
+# DATABASES = {
 #    'default': {
- #       #nombre del conector de la base de datos
+#       #nombre del conector de la base de datos
 #        'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #        #nombre de la base de datos de postgresql
- #       'NAME': 'nominax',
- #       'USER' : 'postgres',
- #       'PASSWORD': 'Ooem1986',
- #       'HOST': 'localhost',
- #       'DATABASE_PORT': '5432'
- #   }
-#}
+#       'NAME': 'nominax',
+#       'USER' : 'postgres',
+#       'PASSWORD': 'Ooem1986',
+#       'HOST': 'localhost',
+#       'DATABASE_PORT': '5432'
+#   }
+# }
 
 DATABASES = {
-     
-'default' : dj_database_url.config(default=config('DATABASE_URL'))
 
- }
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
+
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -119,9 +117,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
