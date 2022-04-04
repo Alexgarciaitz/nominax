@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-z0hp(epqimec04i)n8j7q=+g0zu@5z9g*-x@kr-5a%3756(4bn
 # para produccion activarlo o desactivarlo True o False
 DEBUG = False
 # la unica instancia que ejecuta el proyecto
-ALLOWED_HOSTS = ['nominay.herokuapp.com/']
+ALLOWED_HOSTS = ['nominay.herokuapp.com']
 
 
 # Application definition
@@ -78,9 +78,7 @@ WSGI_APPLICATION = 'nominax.wsgi.application'
 # }
 
 DATABASES = {
-
     'default': dj_database_url.config(default=config('DATABASE_URL'))
-
 }
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -117,7 +115,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = 'static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
