@@ -4,7 +4,7 @@ from . models import Empleado
 
 def home(request):
     empleados = Empleado.objects.all()
-    return render(request, 'home.html' , {'empleados':empleados})
+    return render(request, 'home.html', {'empleados': empleados})
     # return HttpResponse("hola")
 # Create your views here.
 
