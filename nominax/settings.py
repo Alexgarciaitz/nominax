@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-z0hp(epqimec04i)n8j7q=+g0zu@5z9g*-x@kr-5a%3756(4bn
 # para produccion activarlo o desactivarlo True o False
 DEBUG = False
 # la unica instancia que ejecuta el proyecto
-ALLOWED_HOSTS = ['nominay.herokuapp.com/']
+ALLOWED_HOSTS = ['nominay.herokuapp.com']
 
 
 # Application definition
